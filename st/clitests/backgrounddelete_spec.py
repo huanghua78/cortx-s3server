@@ -121,6 +121,8 @@ def perform_head_object(oid_dict):
         assert response is not None
         assert response[0] is False
         assert isinstance(response[1], CORTXS3ErrorResponse)
+        print("error status: " + response[1].get_error_status())
+        print("error reason: " + response[1].get_error_reason())
         assert response[1].get_error_status() == 404
         assert response[1].get_error_reason() == "Not Found"
         print("Object oid \"" + oid + "\" is not present in list..")

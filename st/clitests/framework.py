@@ -28,7 +28,7 @@ from ldap_setup import LdapSetup
 from cloud_setup import CloudGatewaySetup
 
 class Config:
-    log_enabled = False
+    log_enabled = True
     dummy_run = False
     config_file = 'pathstyle.s3cfg'
     time_readable_format = True
